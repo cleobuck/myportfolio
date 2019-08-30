@@ -1,0 +1,82 @@
+$sweat: #969897;
+$kakhi: #8e876b;
+$hunting: #6e3637;
+$boldOrange: #bd5635;
+@mixin childrenCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header {
+    font-family: 'Roboto Slab', serif;
+    height: 100vh;
+    background: $sweat;
+    color: $hunting;
+    text-shadow: 2px 2px 2px rgba(110,54,55,0.82);
+    @include childrenCenter;
+    h1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .profil {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 100%;
+        padding-right: 7px;
+        margin-left: 20px;
+        box-shadow: 10px 10px 5px -9px rgba(0,0,0,0.75);}
+}
+
+
+/* NAV */
+
+
+nav {
+    background: $boldOrange;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: black;
+        }
+    }
+
+
+    /* about */ 
+
+#about {
+    height: 100vh;
+   @include childrenCenter;
+}
+
+#portfolio {
+    background: $kakhi;
+    height: 100vh;
+    @include childrenCenter;
+}
+
+#contact {
+    @include childrenCenter;
+    height: 100vh;
+}
+
+footer {
+    background: $boldOrange;
+    height:  50px;
+    display: flex;
+    align-items: center;
+}
