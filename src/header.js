@@ -16,7 +16,7 @@ export default class Header extends Component {
         
           </div>
 
-         <h1>Hi, I'm Cleo Buck <span>a full-stack web developper</span> <a href="#portfolio">view my work</a></h1>
+         <h1>Hi, I'm Cleo Buck <span>a full-stack web developper</span> <a href="#about">view my work</a></h1>
          <div className="profil">
   
          <img src={profil} alt="profile"></img>

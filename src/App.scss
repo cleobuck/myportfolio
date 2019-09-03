@@ -20,6 +20,11 @@ $secondColor: #dfd8c8;
 html {
     scroll-behavior: smooth;
   }
+
+.app {
+    display: flex;
+    direction: columns;
+}
   
 * {
     font-family: 'Roboto Slab', serif;
@@ -31,7 +36,7 @@ html {
 /* HEADER */
 
 header {
-   
+    position: relative;
     height: 100vh;
     background: $mainColor url('/src/img/background.jpg');
     color: white;
@@ -42,16 +47,18 @@ header {
         align-self: flex-end;
         border: 3px solid white;
         color: white;
-        font-size: 1rem;
+        font-size: 2rem;
         margin-top: 10px;
-
-
     }
     h1 {
         display: flex;
         flex-direction: column;
         z-index: 2;
+       
     }
+
+    
+
     .profil {
         width: 200px;
         height: 200px;
@@ -76,33 +83,33 @@ header {
 /* NAV */
 
 
-    .navbar {
+.navbar {
 
-        background: rgba(29,31,33, 0.9);
-        display: flex;
-        justify-content: space-around; 
-        align-items: center;
-        height: 50px;
-        width: 100%;
-        padding: 10px;
+    background: rgba(29,31,33, 0.9);
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
 
-        position: fixed;
-        top: 0;
-        z-index: 3;
-        transition: top 0.6s;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: top 0.6s;
 
-        a {
-            text-decoration: none;
-            color: $text;
-            font-weight: bolder;
-            font-size: 1.2rem;
-            
-        }
-      }
-      
-      .navbar--hidden {
-        top: -100px;
-      }
+    a {
+        text-decoration: none;
+        color: $text;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        
+    }
+}
+    
+.navbar--hidden {
+top: -100px;
+}
       
 
 
@@ -110,10 +117,12 @@ header {
     /* about */ 
 
 #about {
+    padding: 0 10%;
+    padding-top: 70px;
     color: $mainColor;
     height: 100vh;
     display: flex;
-    padding: 0 10%;
+    
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
@@ -180,8 +189,9 @@ header {
 #contact {
     @include childrenCenter;
     margin: 10% auto;
-    height: 100vh;
     width: 80vw;
+    height: 100vh;
+    padding-bottom: 50px;
 
     div {
         display: flex;
@@ -211,6 +221,9 @@ header {
 }
 
 footer {
+    margin-top: auto;
+    width: 100%;
+    z-index: 2;
     font-size: 1.5rem;
     background: $mainColor;
     height:  50px;
@@ -222,3 +235,130 @@ footer {
     }
    
 }
+
+
+// media queries 
+@media screen and (max-width: 1200px) {
+    #about {
+        div {
+            div {
+                
+                span {
+                    font-size: 2rem;
+                i {
+                    font-size: 3rem;
+                    }
+                }   
+                
+            }
+
+        }
+  
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #about {
+        div {
+            flex-direction: column;
+            div {
+                flex-direction: row;
+
+                span {
+                    font-size: 2rem;
+                i {
+                    font-size: 3rem;
+                    }
+                }   
+                    
+            }
+               
+                
+        }
+
+    }
+  
+}
+
+
+@media screen and (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+    
+        h1 {
+            align-items: center;
+            a {
+                align-self: center;
+            }
+        }
+        .profil {
+            order: -1;
+        }
+    }
+
+    #about {
+        height: auto;
+        padding: 20px 15px;
+        div {
+            div {
+                flex-direction: column;
+             
+            }
+        }
+    }
+
+    #portfolio {
+      
+    
+        div {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+               max-width: 300px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    #contact {
+        margin: 2% auto;
+        width: 80vw;
+    
+        div {
+           padding-top: 50px;
+            img {
+                display: none;
+            }
+          
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    body {
+        max-width: 500px;
+        overflow: hidden;
+    }
+    header {
+        h1 {
+            align-items: center;
+            font-size: 1.5rem;
+            span {
+                font-size: 1.5rem;
+
+            }
+           
+        }
+    
+    }
+    .navbar {
+        display: none;
+    }
+}  
+    
