@@ -13,7 +13,7 @@ html {
 /* HEADER */
 header {
   height: 100vh;
-  background: #dda885 url("/src/img/background.jpg");
+  background: #1d1f21 url("/src/img/background.jpg");
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,7 +67,7 @@ header .feather {
 
 /* NAV */
 .navbar {
-  background: #dda885;
+  background: rgba(29, 31, 33, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,6 +99,7 @@ header .feather {
 
 /* about */
 #about {
+  color: #1d1f21;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,27 +172,55 @@ header .feather {
 }
 
 #portfolio div {
+  width: 90%;
   margin: 30px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   overflow: hidden;
 }
 
-#portfolio div a {
-  width: 300px;
-  height: 200px;
+#portfolio div a.game {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+#portfolio a.yurms {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#portfolio a.allezcine {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#portfolio a.becodechat {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 3 / 4;
+}
+
+#portfolio a {
+  display: block;
   overflow: hidden;
 }
 
-#portfolio div a img {
+#portfolio a img {
   width: 100%;
 }
 
@@ -250,7 +279,8 @@ header .feather {
 }
 
 footer {
-  background: #dda885;
+  font-size: 1.5rem;
+  background: #1d1f21;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,5 +291,9 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+footer a {
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */
