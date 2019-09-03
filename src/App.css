@@ -201,19 +201,21 @@ header .feather {
 }
 
 #portfolio a.yurms {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-#portfolio a.allezcine {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 2 / 2 / 3 / 3;
+  position: relative;
+  top: -5px;
+}
+
+#portfolio a.allezcine {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 #portfolio a.becodechat {
@@ -222,11 +224,6 @@ header .feather {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-area: 1 / 3 / 3 / 4;
-}
-
-#portfolio a {
-  display: block;
-  overflow: hidden;
 }
 
 #portfolio a img {
@@ -389,7 +386,6 @@ footer a {
   }
   #portfolio div a {
     max-width: 300px;
-    margin-bottom: 5px;
   }
   #contact {
     margin: 2% auto;
