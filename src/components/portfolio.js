@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Jeux from './img/jeux.webp'
-import Yurms from './img/yurms.webp'
-import AllezCine from './img/allezcine.webp'
-import Becodechat from './img/chatbecode.webp'
+import Jeux from '../img/jeux.webp'
+import Yurms from '../img/yurms.webp'
+import AllezCine from '../img/allezcine.webp'
+import Becodechat from '../img/chatbecode.webp'
 
 
 export default class Portfolio extends Component {
     render() {
       return (
         <section id="portfolio">
-         	<h2>My projects</h2>
+         	<h2>PROJECTS</h2>
 
 
            <div>

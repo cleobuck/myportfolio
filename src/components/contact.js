@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactImg from './img/contact.webp'
+import ContactImg from '../img/contact.webp'
 import Footer from './footer'
 import Form from './form'
 

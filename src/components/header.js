@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import profil from './img/profil.png';
+import profil from '../img/profil.png';
 import Feathers from './feathers';
-import Background from './img/background.webp'
+import Background from '../img/background.webp'
 
 export default class Header extends Component {
     render() {

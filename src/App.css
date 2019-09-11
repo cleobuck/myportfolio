@@ -194,8 +194,8 @@ header .feather {
 #portfolio > h2 {
   margin-top: 100px;
   font-size: 2rem;
-  border-bottom: 10px solid black;
-  padding-bottom: 5px;
+  border-bottom: 10px solid #1d1f21;
+  padding-bottom: 20px;
 }
 
 #portfolio > div {
