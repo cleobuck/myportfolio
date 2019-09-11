@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import feather from '../img/feather.png';
 
 
-export default class Test extends Component {
+export default class Feather extends Component {
     render() {
 
         let styles = {
