@@ -27,6 +27,7 @@ html {
 }
   
 * {
+    box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     
     margin: 0;
@@ -42,22 +43,32 @@ header {
     color: white;
     @include childrenCenter;
     a {
-        padding: 5px;
+        padding: 10px;
         text-decoration: none;
         align-self: flex-end;
         border: 3px solid white;
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 10px;
+        
     }
     h1 {
         display: flex;
         flex-direction: column;
         z-index: 2;
-       
+        .arrowDown {
+            display: none;
+        }
+        &:hover {
+            .arrowRight {
+                display: none;
+            }
+            .arrowDown {
+                display: inline;
+            }
+           
+        }
     }
-
-    
 
     .profil {
         width: 200px;
@@ -110,6 +121,10 @@ header {
 .navbar--hidden {
 top: -100px;
 }
+
+.toggleMenu {
+    display: none;
+}
       
 
 
@@ -147,18 +162,19 @@ top: -100px;
 
 #portfolio {
     background: $lightBackground;
-    color: black;
+    color: $mainColor;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    h2 {
+
+    >h2 {
         margin-top: 100px;
         font-size: 2rem;
         border-bottom: 10px solid black;
         padding-bottom: 5px;
     }
-    div {
+    >div {
         width: 90%;
         margin: 30px auto;
         display: grid;
@@ -167,22 +183,56 @@ top: -100px;
         overflow: hidden;
         a.game {
                 grid-area: 1 / 1 / 3 / 2;
+               
              }
                
          }
-         a.yurms { grid-area: 2 / 2 / 3 / 3 ;
-            position: relative;
-            top: -5px;
+         a.yurms { 
+             grid-area: 2 / 2 / 3 / 3 ;
+          
+          
+
          }
          a.allezcine { grid-area: 1 / 2 / 2 / 3 ;
+          
             
         }
-         a.becodechat { grid-area: 1 / 3 / 3 / 4; }
+         a.becodechat { grid-area: 1 / 3 / 3 / 4;
+          
+        }
 
 
         a {
+            overflow: hidden;
+            box-sizing: border-box;
+            position: relative;
+            .projectContent { 
+                box-sizing: border-box;
+
+                        display: flex;
+                        opacity: 0;
+                        font-weight: bolder;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                    
+                        position: absolute;
+                        top: 0;
+                        z-index: 3;
+
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.75);
+
+                      &:hover {
+                          opacity: 1;
+                      }
+
+                }
             
             img {
+                display: block;
                 width: 100%;
             }
         }
@@ -192,11 +242,15 @@ top: -100px;
 
 
 #contact {
-    @include childrenCenter;
-    margin: 10% auto;
-    width: 80vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+    width: 100%;
     height: 100vh;
-    padding-bottom: 50px;
+    
 
     div {
         display: flex;
@@ -349,7 +403,7 @@ footer {
 @media screen and (max-width: 500px) {
     body {
         max-width: 500px;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     header {
         h1 {
@@ -363,8 +417,65 @@ footer {
         }
     
     }
-    .navbar {
+    .navbar, navbar--hidden {
         display: none;
     }
+    .toggleFull {
+        height: 100vh;
+    }
+    .toggleMenu {
+        color: white;
+        width: 100%;
+        display:block;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        button {
+            background: rgba(29,31,33, 0.95);
+            width:100%;
+            flex-basis: 25px;
+            font-size: 2rem;
+            border: none;
+            cursor: pointer;
+            i {
+                color: white;
+            }
+        }
+
+        button.openMenu {
+            background: white;
+            i {
+                color:  rgba(29,31,33, 0.95);
+            }
+        }
+        .menu {
+            flex-grow: 1;
+            justify-content: space-evenly;
+            width: 100%;
+            background: rgba(29,31,33, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+               @include childrenCenter();
+                
+                width: 100%;
+                border-bottom: 5px solid white;
+            
+                text-decoration: none;
+                color: white;
+                padding: 5px;
+                font-weight: bolder;
+                font-size: 2.5rem;
+                flex-grow: 1;
+                
+            }
+        }
+    }
 }  
+
     

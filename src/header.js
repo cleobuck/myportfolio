@@ -5,8 +5,6 @@ import Background from './img/background.webp'
 
 export default class Header extends Component {
     render() {
-
-
       return (
 
         <header id="header" style={ {background: `url(${Background}) no-repeat bottom center/cover`}}>
@@ -16,7 +14,7 @@ export default class Header extends Component {
         
           </div>
 
-         <h1>Hi, I'm Cleo Buck <span>a full-stack web developper</span> <a href="#about">view my work</a></h1>
+         <h1>Hi, I'm Cleo Buck <span>a full-stack web developper  </span>  <a href="#about">view my work  <i className="arrowDown fas fa-arrow-down"></i><i className="arrowRight fas fa-arrow-right"></i></a></h1>
          <div className="profil">
   
          <img src={profil} alt="profile"></img>
@@ -25,5 +23,6 @@ export default class Header extends Component {
       );
     }
   }
+
 
 
