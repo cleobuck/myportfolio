@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 export default class About extends Component {
     render() {
       return (
+
+        <ScrollAnimation animateIn="fadeIn">
         <section id="about">
          <p> 
            After exploring the world for years, I found a new adventure: web development. I strive for clean, efficient code and I love learning about what's happening under the hood. These are my skills: 
@@ -50,6 +54,7 @@ export default class About extends Component {
          </div>
          
         </section>
+        </ScrollAnimation>
       );
     }
   }

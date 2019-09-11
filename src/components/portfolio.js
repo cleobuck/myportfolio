@@ -3,12 +3,16 @@ import Jeux from '../img/jeux.webp'
 import Yurms from '../img/yurms.webp'
 import AllezCine from '../img/allezcine.webp'
 import Becodechat from '../img/chatbecode.webp'
+import Background from '../img/background2.webp'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 export default class Portfolio extends Component {
     render() {
       return (
-        <section id="portfolio">
+
+        <ScrollAnimation animateIn="fadeIn">
+        <section id="portfolio" style={ {background: `url(${Background}) fixed no-repeat top center/cover`}}>
          	<h2>PROJECTS</h2>
 
 
@@ -59,6 +63,7 @@ export default class Portfolio extends Component {
            </div>
            
         </section>
+        </ScrollAnimation>
       );
     }
   }

@@ -15,8 +15,6 @@ export default class Menu extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
 
-    
-    
   }
 
   // Remove the event listener when the component is unmount.

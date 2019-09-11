@@ -2,6 +2,7 @@
 /* general */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .app {
@@ -23,7 +24,7 @@ html {
 header {
   position: relative;
   height: 100vh;
-  background: #1d1f21 url("/src/img/background.jpg");
+  background: #1d1f21;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,6 +86,42 @@ header .feather {
   position: absolute;
   width: 100px;
   z-index: 1;
+  -webkit-animation: 10s feather ease-out forwards;
+          animation: 10s feather ease-out forwards;
+}
+
+@-webkit-keyframes feather {
+  from {
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    -webkit-transform: rotate(initial);
+            transform: rotate(initial);
+  }
+  to {
+    margin-top: 500px;
+    margin-left: 200px;
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes feather {
+  from {
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    -webkit-transform: rotate(initial);
+            transform: rotate(initial);
+  }
+  to {
+    margin-top: 500px;
+    margin-left: 200px;
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 /* NAV */
@@ -174,8 +211,8 @@ header .feather {
 }
 
 #portfolio {
-  background: #dfd8c8;
-  color: #1d1f21;
+  background: #1d1f21 url("/src/img/background2.webp");
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,7 +231,7 @@ header .feather {
 #portfolio > h2 {
   margin-top: 100px;
   font-size: 2rem;
-  border-bottom: 10px solid #1d1f21;
+  border-bottom: 10px solid white;
   padding-bottom: 20px;
 }
 
@@ -203,6 +240,7 @@ header .feather {
   margin: 30px auto;
   display: -ms-grid;
   display: grid;
+  grid-gap: 20px;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
@@ -247,6 +285,17 @@ header .feather {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 10px 10px 9px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 9px -4px rgba(0, 0, 0, 0.75);
 }
 
 #portfolio a .projectContent {
@@ -281,8 +330,9 @@ header .feather {
 }
 
 #portfolio a img {
+  border: 2px solid white;
   display: block;
-  width: 100%;
+  width: 103%;
 }
 
 #contact {
