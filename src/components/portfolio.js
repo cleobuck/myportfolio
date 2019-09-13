@@ -12,43 +12,50 @@ export default class Portfolio extends Component {
       return (
 
         <ScrollAnimation animateIn="fadeIn">
+
         <section id="portfolio" style={ {background: `url(${Background}) fixed no-repeat top center/cover`}}>
          	<h2>PROJECTS</h2>
 
 
-           <div>
-             
-             <a href="https://shoote.herokuapp.com/" className="game"><img src={Jeux} alt="project screenshot"/>
-             
-              <div className = "projectContent" >
-                  <h2> Shooting game </h2>
-                  <p> Javascript and Phaser3</p>
-              </div>
+           <div className="portfolio-container">
 
-             </a>
+             
+             <div className="portfolio-groups">
 
-             <a href="https://cleobuck.github.io/yurms/" className="yurms"><img src={Yurms} alt="project screenshot"/>
+               <a href="https://shoote.herokuapp.com/" className="game"><img src={Jeux} alt="project screenshot"/>
               
-              <div className = "projectContent" >
+                <div className = "projectContent" >
+                    <h2> Shooting game </h2>
+                    <p> Javascript and Phaser3</p>
+                </div>
 
-              <h2> Yurm's restaurant </h2>
-              <p> HTML/CSS, bootstrap, javascript </p>
+              </a>
 
-              </div>
+              <a href="https://cleobuck.github.io/yurms/" className="yurms"><img src={Yurms} alt="project screenshot"/>
+                
+                <div className = "projectContent" >
+                  <h2> Yurm's restaurant </h2>
+                  <p> HTML/CSS, bootstrap, javascript </p>
+                </div>
 
-             </a>
+              </a>
+
+            </div>
+
+
+
+            <div className="portfolio-groups">
 
              <a href="https://cleobuck.github.io/allezcinev3/"className="allezcine"><img src={AllezCine} alt="project screenshot"/>
              
-              <div className = "projectContent" >
-
+            
+            <div className="projectContent">
                   <h2> Allez Cine </h2>
                   <p> Boostrap, Javascript</p>
-
-                </div>
-             
-             
+            </div>
+          
              </a>
+
              <a href="https://becodechat.herokuapp.com/" className="becodechat"><img src={Becodechat} alt="project screenshot"/>
              
               <div className="projectContent" >
@@ -56,10 +63,11 @@ export default class Portfolio extends Component {
                  <h2> Becode Chat </h2>
                   <p> NodeJS, socketIO </p>
 
-                </div>
+              </div>
 
              </a>
-           
+
+            </div>
            </div>
            
         </section>

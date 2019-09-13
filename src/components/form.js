@@ -41,9 +41,11 @@ class Form extends Component {
   render() {
 
 
-    return (
+    return (  
 
+  
       <form action="#">
+     <h2> Contact me</h2>
       <label>First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your name.." value={this.state.fname} onChange={e => this.setState({fname:e.target.value})}/>
       <label>Last Name</label>
@@ -57,14 +59,19 @@ class Form extends Component {
       <label>Subject</label>
       <textarea id="subject" name="subject" placeholder="Write something.." value={this.state.message} onChange={e => this.setState({message: e.target.value})}></textarea>
       <input type="submit" value="Submit" onClick={e => this.handleFormSubmit(e)} />
-      <div>
-        {this.state.mailSent &&
-          <div>Thanks! </div>
-        }
-      </div>
+ 
       
-      
+<div>
+{this.state.mailSent &&
+  <div>Thanks! </div>
+}
+</div>
+
+
+
       </form>
+
+    
 
       
     );

@@ -59,16 +59,16 @@ header h1 {
   z-index: 2;
 }
 
-header h1 .arrowDown {
-  display: none;
+header h1:hover .arrowRight {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 header h1:hover .arrowRight {
-  display: none;
-}
-
-header h1:hover .arrowDown {
-  display: inline;
+  -webkit-transition: 1s -webkit-transform;
+  transition: 1s -webkit-transform;
+  transition: 1s transform;
+  transition: 1s transform, 1s -webkit-transform;
 }
 
 header .profil {
@@ -197,7 +197,7 @@ header .feather {
 }
 
 #about div span {
-  font-size: 3rem;
+  font-size: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,76 +235,36 @@ header .feather {
   padding-bottom: 20px;
 }
 
-#portfolio > div {
-  width: 90%;
-  margin: 30px auto;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  overflow: hidden;
-}
-
-#portfolio > div a.game {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 1 / 3 / 2;
-}
-
-#portfolio a.yurms {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 2 / 3 / 3;
-}
-
-#portfolio a.allezcine {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 2 / 2 / 3;
-}
-
-#portfolio a.becodechat {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 3 / 3 / 4;
-}
-
-#portfolio a {
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: relative;
+#portfolio .portfolio-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 10px 10px 9px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 9px -4px rgba(0, 0, 0, 0.75);
+  width: 70%;
 }
 
-#portfolio a .projectContent {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#portfolio .portfolio-container .portfolio-groups {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#portfolio .portfolio-container .projectContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
   font-weight: bolder;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -317,22 +277,29 @@ header .feather {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
 }
 
-#portfolio a .projectContent:hover {
+#portfolio .portfolio-container .projectContent:hover {
   opacity: 1;
 }
 
-#portfolio a img {
-  border: 2px solid white;
+#portfolio .portfolio-container a {
+  position: relative;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-container a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#portfolio .portfolio-container img {
+  width: 100%;
   display: block;
-  width: 103%;
 }
 
 #contact {
@@ -355,7 +322,8 @@ header .feather {
   height: 100vh;
 }
 
-#contact div {
+#contact > div {
+  color: #1d1f21;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,14 +331,17 @@ header .feather {
       -ms-flex-pack: center;
           justify-content: center;
   height: 70%;
-  width: 30%;
+  width: 70%;
 }
 
-#contact div img {
+#contact > div img {
   height: 100%;
 }
 
-#contact div form {
+#contact > div form {
+  border: 4px solid rgba(223, 216, 200, 0.7);
+  border-left: none;
+  border-bottom: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,20 +349,30 @@ header .feather {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-left: 5%;
+  padding: 0 20px;
 }
 
-#contact div form h2 {
+#contact > div form h2 {
   margin-bottom: 10px;
   font-size: 2rem;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid #1d1f21;
   padding-bottom: 5px;
 }
 
-#contact div form input, #contact div form textarea {
+#contact > div form input, #contact > div form textarea, #contact > div form label {
   padding: 3px;
+}
+
+#contact > div form input[type=submit] {
+  background: #1d1f21;
+  color: white;
+  font-weight: bolder;
+}
+
+#contact > div form textarea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 footer {

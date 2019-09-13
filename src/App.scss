@@ -5,7 +5,7 @@
 $mainColor:#1d1f21;
 $lightBackground: #dfd8c8;
 $text: white;
-$secondColor: #dfd8c8;
+
 
 @mixin childrenCenter {
     display: flex;
@@ -20,6 +20,7 @@ $secondColor: #dfd8c8;
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+  
   }
 
 .app {
@@ -57,17 +58,13 @@ header {
         display: flex;
         flex-direction: column;
         z-index: 2;
-        .arrowDown {
-            display: none;
-        }
         &:hover {
             .arrowRight {
-                display: none;
+                transform: rotate(90deg);
             }
-            .arrowDown {
-                display: inline;
-            }
-           
+        .arrowRight {
+            transition: 1s transform;
+        }
         }
     }
 
@@ -166,7 +163,7 @@ top: -100px;
     justify-content: space-around;
     margin-top: 20px;
     span {
-        font-size: 3rem;
+        font-size: 2.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -189,79 +186,126 @@ top: -100px;
         border-bottom: 10px solid white;
         padding-bottom: 20px;
     }
-    >div {
-        width: 90%;
-        margin: 30px auto;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        overflow: hidden;
-        
-        a.game {
-                grid-area: 1 / 1 / 3 / 2;
-               
-             }
-               
-         }
-         a.yurms { 
-             grid-area: 2 / 2 / 3 / 3 ;
-          
-          
+    .portfolio-container {
+    
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        width: 70%;
 
-         }
-         a.allezcine { grid-area: 1 / 2 / 2 / 3 ;
-          
-            
-        }
-         a.becodechat { grid-area: 1 / 3 / 3 / 4;
-       
+        .portfolio-groups {
+            display: flex;
+            flex-direction: column;
         }
 
+
+        .projectContent {
+    
+            display: flex;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background-color: rgba(0,0,0,0.8);
+           
+            font-weight: bolder;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            &:hover {
+                opacity: 1;
+               
+            }
+            transition: 1s opacity;
+        }
 
         a {
-            overflow: hidden;
-            box-sizing: border-box;
             position: relative;
-            @include childrenCenter();
-            -webkit-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 9px -4px rgba(0,0,0,0.75);
-            .projectContent { 
-                box-sizing: border-box;
-
-                        display: flex;
-                        opacity: 0;
-                        font-weight: bolder;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        color: white;
-                    
-                        position: absolute;
-                        top: 0;
-                        z-index: 3;
-
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0,0,0,0.75);
-
-                      &:hover {
-                          opacity: 1;
-                      }
-
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                    transition: all 1s;
                 }
-            
-            img {
-                border: 2px solid white;
-
-                display: block;
-                width: 103%;
+              
             }
+           
+        }
+
+        img {
+            width: 100%;
+            display: block;
+
+        }
+
+ 
+ 
         }
     }
 
 
+       //     margin: 30px auto;
+    //     display: flex;
+    //     overflow: hidden;
+    //     >div {
+          
+    //         display: flex;
+    //         flex-direction: column;
+
+    //     }
+        
+    //     a.game {
+            
+    //           .projectContent {
+    //             top: 3%;
+    //                height: 94%;
+    //            }
+    //          }
+               
+
+    //      }
+         
+        
+    //      a.becodechat {
+    //         .projectContent {
+    //             top: 3% !important;
+    //             height: 94% !important;
+    //         }
+    //     }
+
+
+
+    //     a {
+    //         flex-shrink: 1;
+    //         flex-basis: 200px;
+    //         overflow: hidden;
+    //         box-sizing: border-box;
+    //         position: relative;
+    //         @include childrenCenter();
+     
+    //         .projectContent { 
+    //                     display: none;
+    //                 //     box-sizing: border-box;
+    //                 // 
+                    
+    //                 //     position: absolute;
+    //                 //     top: 0;
+    //                 //     z-index: 3;
+
+    //                 //     width: 100%;
+    //                 //     height: 100%;
+    //                 //     background-color: rgba(0,0,0,0.75);
+
+    //                 //   &:hover {
+    //                 //       opacity: 1;
+    //                 //   }
+
+    //             }
+            
+    //        
 
 
 
@@ -276,28 +320,44 @@ top: -100px;
     height: 100vh;
     
 
-    div {
+    >div {
+       
+        color: $mainColor;
         display: flex;
         justify-content: center;
         height: 70%;
-        width: 30%;
+        width: 70%;
         img {
             height: 100%;
         }
         form {
-
+            border: 4px solid rgba(223,216,200,0.7);
+            border-left: none;
+            border-bottom: none;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            margin-left: 5%;
+          
+            padding: 0 20px;
+           
             h2 {
                 margin-bottom: 10px;
                 font-size: 2rem;
-                border-bottom: 10px solid black;
+                border-bottom: 10px solid $mainColor;
                 padding-bottom: 5px;
             }
-            input, textarea {
+            input, textarea, label {
                 padding: 3px;
+                
+            }
+
+            input[type=submit] {
+                background: $mainColor;
+                color: white;
+                font-weight: bolder;
+            }
+        
+            textarea {
+                flex-grow: 1;
             }
         }
     }
