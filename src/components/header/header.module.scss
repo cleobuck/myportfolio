@@ -1,0 +1,78 @@
+@import "variables.scss";
+
+.header {
+  position: relative;
+  display: none;
+  height: 100vh;
+  background: $mainColor;
+  color: white;
+  @include childrenCenter;
+  a {
+    padding: 10px;
+    text-decoration: none;
+    align-self: flex-end;
+    border: 3px solid white;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    &:hover {
+      .arrowRight {
+        transform: rotate(90deg);
+      }
+      .arrowRight {
+        transition: 1s transform;
+      }
+    }
+  }
+
+  .profil {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 100%;
+    padding-right: 7px;
+    margin-left: 20px;
+    box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.75);
+  }
+  .feather {
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+  }
+}
+
+// MEDIA QUERIES //
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      align-items: center;
+      a {
+        align-self: center;
+      }
+    }
+    .profil {
+      order: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    h1 {
+      align-items: center;
+      font-size: 1.5rem;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

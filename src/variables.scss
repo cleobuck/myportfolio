@@ -1,0 +1,9 @@
+$mainColor: #1d1f21;
+$lightBackground: #dfd8c8;
+$text: white;
+
+@mixin childrenCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

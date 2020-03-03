@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+.contact {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 100px;
+  width: 100%;
+  height: 100vh;
+
+  > div {
+    color: $mainColor;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 70%;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact {
+    margin: 2% auto;
+    width: 80vw;
+
+    div {
+      padding-top: 50px;
+      img {
+        display: none;
+      }
+    }
+  }
+}
