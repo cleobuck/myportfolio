@@ -16,7 +16,7 @@ export default class Contact extends Component {
           }}
         >
           <p>
-            I strive for clean, efficient code and I love learning about what's
+            I strive for clean, efficient code and love learning what's
             happening under the hood.
           </p>
 

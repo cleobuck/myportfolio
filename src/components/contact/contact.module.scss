@@ -3,14 +3,15 @@
 .contact {
   box-sizing: border-box;
   position: relative;
+  margin: 2% auto;
   color: white;
   display: flex;
-  padding-top: 20vh;
+  padding-top: 50px;
+
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  width: 100%;
+  width: 80vw;
   height: 100vh;
   > i {
     position: absolute;
@@ -22,27 +23,32 @@
   }
 
   p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     width: 70%;
     font-weight: bold;
     text-align: center;
+    &:first-child {
+      margin-top: 4rem;
+    }
   }
 
   img {
-    height: 100%;
+    img {
+      display: none;
+    }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media (min-width: 768px) {
   .contact {
-    margin: 2% auto;
-    width: 80vw;
-
+    font-size: 1.7rem;
+    width: 100%;
+    margin: 0;
     div {
-      padding-top: 50px;
-      img {
-        display: none;
-      }
+      padding-top: 20vh;
+    }
+    img {
+      height: 100%;
     }
   }
 }
