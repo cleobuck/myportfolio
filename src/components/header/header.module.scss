@@ -2,13 +2,14 @@
 
 .header {
   position: relative;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  @include childrenCenter;
   height: 100vh;
   background: $mainColor;
   color: white;
-  @include childrenCenter;
   a {
-    padding: 10px;
+    padding: 0.5;
     text-decoration: none;
     align-self: flex-end;
     border: 3px solid white;
@@ -17,10 +18,20 @@
     margin-top: 10px;
   }
   h1 {
+    align-items: center;
     display: flex;
     flex-direction: column;
-
+    font-size: 1.5rem;
     z-index: 2;
+    h1 {
+      align-items: center;
+      a {
+        align-self: center;
+      }
+    }
+    .profil {
+      order: -1;
+    }
 
     button {
       background: none;
@@ -59,33 +70,20 @@
   }
 }
 
-// MEDIA QUERIES //
-
-@media screen and (max-width: 767.98px) {
+@media (min-width: 768px) {
   .header {
-    flex-direction: column;
-    justify-content: center;
-
+    font-size: 2rem;
     h1 {
-      align-items: center;
-      a {
-        align-self: center;
-      }
-    }
-    .profil {
-      order: -1;
+      font-size: 2rem;
     }
   }
 }
 
-@media screen and (max-width: 576.98px) {
+@media (min-width: 1200px) {
   .header {
+    font-size: 3rem;
     h1 {
-      align-items: center;
-      font-size: 1.5rem;
-      span {
-        font-size: 1.5rem;
-      }
+      font-size: 3rem;
     }
   }
 }

@@ -2,34 +2,23 @@
 
 .contact {
   box-sizing: border-box;
-  position: relative;
-  margin: 2% auto;
   color: white;
-  display: flex;
-  padding-top: 50px;
+  position: relative;
 
+  width: 100vw;
+
+  //flex
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 80vw;
-  height: 100vh;
-  > i {
-    position: absolute;
-    bottom: 60px;
-    right: 2%;
-    opacity: 0.5;
-    font-size: 2rem;
-    cursor: pointer;
-  }
 
   p {
-    font-size: 1.4rem;
-    width: 70%;
+    font-size: 1rem;
+    width: 90%;
     font-weight: bold;
     text-align: center;
-    &:first-child {
-      margin-top: 4rem;
-    }
+    padding: 2rem;
   }
 
   img {
@@ -41,14 +30,16 @@
 
 @media (min-width: 768px) {
   .contact {
-    font-size: 1.7rem;
-    width: 100%;
-    margin: 0;
-    div {
-      padding-top: 20vh;
+    p {
+      font-size: 1.4rem;
     }
-    img {
-      height: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    p {
+      font-size: 1.6rem;
     }
   }
 }

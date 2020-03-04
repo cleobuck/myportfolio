@@ -18,6 +18,11 @@ export default class Footer extends Component {
         <a href="mailto:cleo.buck@gmail.com">
           <i className="fas fa-envelope-open-text"></i>
         </a>
+
+        <i
+          class="fas fa-arrow-circle-up"
+          onClick={() => window.scrollTo(0, 0)}
+        ></i>
       </footer>
     );
   }

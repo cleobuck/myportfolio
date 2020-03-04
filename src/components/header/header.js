@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import profil from "img/profil.png";
-
 import Background from "img/background.webp";
 import Feather from "./feather";
 import styles from "./header.module.scss";
@@ -10,7 +9,6 @@ export default class Header extends Component {
     return (
       <header
         className={styles.header}
-        id="header"
         style={{
           background: `url(${Background}) fixed no-repeat bottom center/cover`
         }}

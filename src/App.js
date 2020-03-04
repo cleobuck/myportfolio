@@ -9,7 +9,8 @@ import Skills from "./components/skills/Skills";
 
 export default class App extends Component {
   state = {
-    viewHeight: ""
+    viewHeight: "",
+    scrollTop: ""
   };
 
   componentDidMount() {

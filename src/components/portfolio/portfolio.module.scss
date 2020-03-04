@@ -10,12 +10,11 @@
   align-items: center;
   justify-content: space-evenly;
   > i {
-    position: absolute;
-    bottom: 5%;
-    right: 2%;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
-    display: none;
+    &:hover {
+      opacity: 0.5;
+    }
   }
   > h2 {
     font-size: 2rem;
@@ -65,10 +64,27 @@
         }
       }
     }
-
     img {
       width: 100%;
       display: block;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolioContainer {
+    width: 90% !important;
+  }
+  .portfolioGroups {
+    flex-direction: row !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolioContainer {
+    width: 70% !important;
+  }
+  .portfolioGroups {
+    flex-direction: row !important;
   }
 }

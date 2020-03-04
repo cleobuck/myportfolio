@@ -16,15 +16,12 @@ export default class Contact extends Component {
           }}
         >
           <p>
-            I strive for clean, efficient code and love learning what's
-            happening under the hood.
+            I strive for clean, efficient code and love learning about what
+            happens under the hood.
           </p>
 
           <p> Click on your preferred icon below to contact me</p>
-          <i
-            class="fas fa-arrow-circle-up"
-            onClick={() => window.scrollTo(0, 0)}
-          ></i>
+
           <Footer />
         </section>
       </ScrollAnimation>

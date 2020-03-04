@@ -44,11 +44,20 @@
 
 @media (min-width: 768px) {
   .skills {
-    font-size: 2rem;
-    flex-direction: row;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .skills {
+    font-size: 3rem;
+
     height: 100vh;
     p {
       padding-top: 0;
+    }
+    > div {
+      flex-direction: row;
     }
   }
 }
