@@ -8,9 +8,7 @@ export default class Footer extends Component {
         <a href="https://github.com/cleobuck">
           <i className="fab fa-github-alt"></i>
         </a>
-        <a href="https://codepen.io/cleobuck">
-          <i className="fab fa-codepen"></i>
-        </a>
+
         <a href="https://www.facebook.com/cleo.buck">
           <i className="fab fa-facebook"></i>
         </a>

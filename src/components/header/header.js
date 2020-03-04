@@ -21,13 +21,16 @@ export default class Header extends Component {
 
         <h1>
           Hi, I'm Cleo Buck <span>a full-stack web developer </span>
-          <a href="#about">
-            view my work <i className="arrowRight fas fa-arrow-right"></i>
-          </a>
+          <button
+            className="workButton"
+            onClick={() => this.props.scrollDown(0)}
+          >
+            Find out more <i className="fas fa-arrow-right"></i>
+          </button>
         </h1>
-        <div className={styles.profil}>
+        <figure>
           <img src={profil} alt="profile"></img>
-        </div>
+        </figure>
       </header>
     );
   }

@@ -19,18 +19,31 @@
   h1 {
     display: flex;
     flex-direction: column;
+
     z-index: 2;
-    &:hover {
-      .arrowRight {
-        transform: rotate(90deg);
-      }
-      .arrowRight {
-        transition: 1s transform;
+
+    button {
+      background: none;
+      border-radius: 5px;
+      border: 1px solid white;
+      color: white;
+      margin-top: 2rem;
+      font-weight: bold;
+      align-self: flex-end;
+      padding: 0.5rem 1rem;
+      opacity: 0;
+
+      &:hover {
+        cursor: pointer;
+        i {
+          transform: rotate(90deg);
+          transition: 1s transform;
+        }
       }
     }
   }
 
-  .profil {
+  figure {
     width: 200px;
     height: 200px;
     overflow: hidden;

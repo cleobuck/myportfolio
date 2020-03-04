@@ -1,0 +1,67 @@
+// feathers gliding
+
+.animFeather {
+  animation: 10s glide ease-out forwards;
+}
+
+@keyframes glide {
+  0% {
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    transform: rotate(initial);
+  }
+  99% {
+    margin-top: 500px;
+    margin-left: 200px;
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  100% {
+    margin-left: 3000px;
+  }
+}
+
+// button appearing with bug
+
+.workButton {
+  animation: 1s appear 0.25s ease-out forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// bopping scroll down
+
+.bop {
+  &:hover {
+    .fa-sort-down,
+    > i {
+      animation: 1.5s bop 5s ease-out forwards;
+    }
+  }
+}
+
+@keyframes bop {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(30%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

@@ -6,47 +6,17 @@ export default class About extends Component {
   render() {
     return (
       <ScrollAnimation animateIn="fadeIn">
-        <section className={styles.about}>
+        <section className={`${styles.about} bop`}>
           <p>
             After exploring the world for years, I found a new adventure: web
-            development. I strive for clean, efficient code and I love learning
-            about what's happening under the hood. These are my skills:
+            development. I dove into a sea of markup, stylesheet and programming
+            languages. Here are some of the projects I completed as part of my
+            course
           </p>
-          <div>
-            <div>
-              <span>
-                <i className="fab fa-html5"></i>
-                HTML
-              </span>
-
-              <span>
-                <i className="fab fa-css3-alt"></i>
-                CSS
-              </span>
-
-              <span>
-                <i className="fab fa-js-square"></i>
-                Javascript
-              </span>
-            </div>
-
-            <div>
-              <span>
-                <i className="fab fa-react"></i>
-                React
-              </span>
-
-              <span>
-                <i className="fab fa-node-js"></i>
-                NodeJS
-              </span>
-
-              <span>
-                <i className="fab fa-php"></i>
-                Php
-              </span>
-            </div>
-          </div>
+          <i
+            class="fas fa-sort-down"
+            onClick={() => this.props.scrollDown(1)}
+          ></i>
         </section>
       </ScrollAnimation>
     );

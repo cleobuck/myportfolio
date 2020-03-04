@@ -2,23 +2,34 @@
 
 .contact {
   box-sizing: border-box;
+  position: relative;
+  color: white;
   display: flex;
+  padding-top: 20vh;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 100px;
+  justify-content: space-between;
+
   width: 100%;
   height: 100vh;
+  > i {
+    position: absolute;
+    bottom: 60px;
+    right: 2%;
+    opacity: 0.5;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
-  > div {
-    color: $mainColor;
-    display: flex;
-    justify-content: center;
-    height: 70%;
+  p {
+    font-size: 1.7rem;
     width: 70%;
-    img {
-      height: 100%;
-    }
+    font-weight: bold;
+    text-align: center;
+  }
+
+  img {
+    height: 100%;
   }
 }
 

@@ -12,7 +12,7 @@ export default class Portfolio extends Component {
     return (
       <ScrollAnimation animateIn="fadeIn">
         <section
-          className={styles.portfolio}
+          className={`${styles.portfolio} bop`}
           id="portfolio"
           style={{
             background: `url(${Background}) fixed no-repeat top center/cover`
@@ -67,6 +67,11 @@ export default class Portfolio extends Component {
               </a>
             </div>
           </div>
+
+          <i
+            class="fas fa-arrow-circle-down"
+            onClick={() => this.props.scrollDown(2)}
+          ></i>
         </section>
       </ScrollAnimation>
     );
