@@ -49,7 +49,7 @@ export default function Skills(props) {
         </div>
         <i
           class="fas fa-arrow-circle-down"
-          onClick={() => props.scrollDown(3)}
+          onClick={() => window.scrollTo(0, document.body.scrollHeight)}
         ></i>
       </section>
     </ScrollAnimation>
