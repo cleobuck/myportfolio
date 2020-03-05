@@ -23,11 +23,12 @@ export default class Header extends Component {
             className="workButton"
             onClick={() => this.props.scrollDown(0)}
           >
-            Find out more <i className="fas fa-arrow-right"></i>
+            Find out more
+            <i className="fas fa-arrow-right" aria-label="scroll down"></i>
           </button>
         </h1>
         <figure>
-          <img src={profil} alt="profile"></img>
+          <img src={profil} alt="portrait profile"></img>
         </figure>
       </header>
     );

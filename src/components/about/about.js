@@ -15,6 +15,7 @@ export default class About extends Component {
           </p>
           <i
             class="fas fa-sort-down"
+            aria-label="scroll down"
             onClick={() => this.props.scrollDown(1)}
           ></i>
         </section>

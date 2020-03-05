@@ -13,32 +13,32 @@ export default function Skills(props) {
         </p>
         <div>
           <span>
-            <i className="fab fa-html5"></i>
+            <i className="fab fa-html5" aria-label="HTML"></i>
             HTML
           </span>
 
           <span>
-            <i className="fab fa-css3-alt"></i>
+            <i className="fab fa-css3-alt" aria-label="CSS"></i>
             CSS
           </span>
 
           <span>
-            <i class="fab fa-sass"></i>
+            <i class="fab fa-sass" aria-label="SASS"></i>
             SASS
           </span>
 
           <span>
-            <i className="fab fa-js-square"></i>
+            <i className="fab fa-js-square" aria-label="Javascript"></i>
             Javascript
           </span>
 
           <span>
-            <i className="fab fa-react"></i>
+            <i className="fab fa-react" aria-label="React"></i>
             React
           </span>
 
           <span>
-            <i class="fab fa-python"></i>
+            <i class="fab fa-python" aria-label="Python"></i>
             Python
           </span>
 
